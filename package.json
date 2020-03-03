@@ -1,0 +1,39 @@
+{
+  "name": "dev-rw-phone",
+  "version": "1.0.0",
+  "description": "RW Phone Number",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc mocha ./test/* --exit",
+    "fix-lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "3.0.9",
+    "eslint": ">=6.7.2",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MutabaziAlleluia/dev-rw-phone.git"
+  },
+  "keywords": [
+    "RW",
+    "Rwanda",
+    "250",
+    "Phone",
+    "Tel"
+  ],
+  "author": "Alleluia M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MutabaziAlleluia/dev-rw-phone/issues"
+  },
+  "homepage": "https://github.com/MutabaziAlleluia/dev-rw-phone#readme"
+}

@@ -1,5 +1,7 @@
 const chai = require("chai");
-const { isOk, format, normalize, short, telco, phone } = require("../index");
+const {
+  isOk, format, normalize, short, telco, phone
+} = require("../index");
 const constants = require("../lib/constants");
 
 const expect = chai.expect;
@@ -53,6 +55,10 @@ describe("Phone", async () => {
     it("should return null if not valid phone", () => {
       const p = telco("0000000");
       expect(p).to.equal(null);
+    });
+    it("should return telco name for new MTN formats", () => {
+      const p = telco("0789000000");
+      expect(p).to.equal("MTN");
     });
   });
   describe("phone info", () => {

@@ -1,7 +1,5 @@
 const chai = require("chai");
-const {
-  isOk, format, normalize, short, telco, phone
-} = require("../index");
+const { isOk, format, normalize, short, telco, phone } = require("../index");
 const constants = require("../lib/constants");
 
 const expect = chai.expect;
@@ -70,7 +68,7 @@ describe("Phone", async () => {
         normalized: "250780000000",
         formatted: "(+250) 780 000 000",
         telco: "MTN",
-        short: "780000000"
+        short: "780000000",
       });
     });
     it("should return short error if phone is short", () => {
@@ -81,7 +79,7 @@ describe("Phone", async () => {
         normalized: "0000000",
         formatted: constants.format,
         telco: null,
-        short: constants.short
+        short: constants.short,
       });
     });
     it("should return invalid error if phone is invalid", () => {
@@ -92,7 +90,7 @@ describe("Phone", async () => {
         normalized: "000000000",
         formatted: constants.format,
         telco: null,
-        short: constants.short
+        short: constants.short,
       });
     });
   });

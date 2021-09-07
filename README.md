@@ -21,7 +21,7 @@ yarn add dev-rw-phone
 
 ## Basic Usage
 
-```js
+```ts
 // Load full build
 const { phone } = require("dev-rw-phone");
 
@@ -50,7 +50,7 @@ console.log(phone("80000000"));
 
 ## isOk()
 
-```js
+```ts
 const { isOk } = require("dev-rw-phone");
 
 console.log(isOk("0780000000"));
@@ -59,13 +59,13 @@ console.log(isOk("0780000000"));
 
 Or
 
-```js
+```ts
 phone("0780000000").isOk;
 ```
 
 ## format()
 
-```js
+```ts
 const { format } = require("dev-rw-phone");
 
 console.log(format("0780000000"));
@@ -74,13 +74,13 @@ console.log(format("0780000000"));
 
 Or
 
-```js
+```ts
 phone("0780000000").formatted;
 ```
 
 ## normalize()
 
-```js
+```ts
 const { normalize } = require("dev-rw-phone");
 
 console.log(normalize("0780000000"));
@@ -89,13 +89,13 @@ console.log(normalize("0780000000"));
 
 Or
 
-```js
+```ts
 phone("0780000000").normalized;
 ```
 
 ## short()
 
-```js
+```ts
 const { short } = require("dev-rw-phone");
 
 console.log(short("0780000000"));
@@ -104,13 +104,13 @@ console.log(short("0780000000"));
 
 Or
 
-```js
+```ts
 phone("0780000000").short;
 ```
 
 ## telco()
 
-```js
+```ts
 const { telco } = require("dev-rw-phone");
 
 console.log(telco("0780000000"));
@@ -119,13 +119,13 @@ console.log(telco("0780000000"));
 
 Or
 
-```js
+```ts
 phone("0780000000").telco;
 ```
 
 ## phone()
 
-```js
+```ts
 const { phone } = require("dev-rw-phone");
 
 console.log(phone("0780000000"));
@@ -143,7 +143,6 @@ console.log(phone("0780000000"));
 
 | [<img src="https://github.com/mutabazialleluia.png" width="100px;"><br><sub><b>Alleluia M</b></sub>](https://github.com/mutabazialleluia) |
 | :---------------------------------------------------------------------------------------------------------------------------------------: |
-
 
 ## Licence
 

@@ -1,4 +1,5 @@
-const constants = require("./constants");
+import constants from "./constants";
+import { Phone, PhoneReturn } from "./types";
 
 /**
  * phone
@@ -10,19 +11,19 @@ const constants = require("./constants");
  * @param {string} telcos[].label - Telco's name
  * @returns {Object} Phone info
  */
-module.exports = (
+const phone: Phone<PhoneReturn> = (
   phoneNumber = "",
   prefix = constants.prefix,
   shotLength = constants.shotLength,
   telcos = constants.telcos
-) => {
+): PhoneReturn => {
   // Make it of type string
   let phone = `${phoneNumber}`;
 
   // Remove all non-numeric values
   phone = phone.replace(/[^\d.-]/g, "");
 
-  let telco = null;
+  let telco: string | null = null;
 
   // Check if too short
   if (phone.length < shotLength) {
@@ -32,7 +33,7 @@ module.exports = (
       normalized: phone,
       formatted: constants.format,
       telco,
-      short: constants.short
+      short: constants.short,
     };
   }
 
@@ -43,14 +44,14 @@ module.exports = (
   // Check if belongs to 'telcos'
   if (
     telcos
-      .map(s => {
+      .map((s) => {
         const r = unformatted.startsWith(`${s.value}`);
         if (r) {
           telco = s.label;
         }
         return r;
       })
-      .includes(true)
+      .indexOf(true) !== -1
   ) {
     return {
       isOk: true,
@@ -61,7 +62,7 @@ module.exports = (
         3
       )} ${unformatted.substr(6, 3)}`,
       telco,
-      short: unformatted
+      short: unformatted,
     };
   }
 
@@ -71,6 +72,8 @@ module.exports = (
     normalized: phone,
     formatted: constants.format,
     telco,
-    short: constants.short
+    short: constants.short,
   };
 };
+
+export default phone;

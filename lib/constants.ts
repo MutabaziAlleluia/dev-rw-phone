@@ -12,7 +12,7 @@ const constants: Constants = {
   short: "7XXXXXXXX",
   telcos: [
     { value: "78", label: "MTN" },
-    { value: "72", label: "Tigo" },
+    { value: "72", label: "Airtel" },
     { value: "73", label: "Airtel" },
     { value: "79", label: "MTN" },
   ],
